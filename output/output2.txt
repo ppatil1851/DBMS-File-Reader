@@ -1,0 +1,14 @@
+T1 Begins Id=1 TS=1 State=Active
+ITEM Y is read locked by T1
+Read lock on Y by T1 is upgraded to write lock
+ITEM Z is read locked by T1
+T2 Begins Id=2 TS=2 State=Active
+T2 aborted due to wait-die
+T3 Begins Id=3 TS=3 State=Active
+ITEM Z is read locked by T3
+T3 blocked\waiting due to wait-die
+T3 blocked\waiting due to wait-die
+T3 blocked\waiting due to wait-die
+T1 is committed
+T3 aborted due to wait-die
+T3 is already aborted
